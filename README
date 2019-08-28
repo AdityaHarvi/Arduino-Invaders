@@ -1,0 +1,183 @@
+README File
+----------------------------------------------------------------------------------
+Name: Aditya Harvi
+Student ID: 1532770
+Name: Micheal Antifaoff
+Student ID: 1542254
+CMPUT 274, Fall 2018
+
+Final Project: Arduino Asteroids
+----------------------------------------------------------------------------------
+Included Files:
+    * asteroids.cpp : Includes these functions: 
+        * "setup":              Sets the initial conditions for the game. It will turn 
+                                all LED's to OUTPUT and set them to be initially off. 
+                                'Life' will be turned on to represent three lives of the 
+                                player. This will be the first user-defined function that 
+                                is called in main().
+        * "imitatesetup":       This is going to immitate the setup. It will turn 
+                                off all red led's and place the player in the starting 
+                                position. It will be called whenver the player hits 
+                                an asteroid.
+        * "deathsound":         This will play a death sounds when the player is hit.
+        * "resetsound":         This will play a reset sound letting the player know 
+                                the game is about to reset.
+        * "moveRight":          This function is going to be called in movement(). 
+                                It will turn the current green LED off and turn on 
+                                the one to the right.
+        * "moveLeft":           This function is going to be called in movement(). 
+                                It will turn the current green LED off and turn on 
+                                the one to the left.
+        * "death":              Has a boolean input, If this function is called and the 
+                                input is true, it will reduce the number of lives by one, 
+                                call immitatesetup(), flash red on the screen if the player 
+                                is out of lives, and turn the game off allowing for the 
+                                final score to be seen.
+                                If lostLife, the boolean input, equals false, it will 
+                                activate the Easter Egg, call immitatesetup(), restore 
+                                all of the user's lives and flash red on the screen.
+        * "randomizer":         This function wil randomly pick a number from 0-4 and 
+                                turn on one of the top 4 LEDs depending on the 
+                                number chosen.
+                                If the counter is equal to 96 through 99, it will light
+                                up the leftmost light (does this four times in a row) so 
+                                that the user can find the Easter Egg.
+        * "chainreaction":      This function will compare the state of the last asteroid 
+                                and the player to determine if they will lose a life, then 
+                                shift all the red LED's down by one and call randomizer().
+                                However, if the user is on their last life and they die on 
+                                the fourth light in a row (at a score of 104), this function 
+                                calls death() with the Easter Egg condition and sets AandM 
+                                to true so that it displays A and M in morse code after the 
+                                score.
+        * "movement":           This function will allow the user to move left-right to 
+                                avoid the asteroids. It calls the moveRight and moveLeft 
+                                functions, and only allows the button to be pressed once 
+                                to trigger an event.
+        * "number0":            If called, it will display the number '0' in a 7-segment 
+                                display format.
+        * "number1":            If called, it will display the number '1' in a 7-segment 
+                                display format.
+        * "number2":            If called, it will display the number '2' in a 7-segment 
+                                display format.
+        * "number(3-8)":        If called, it will display the number '(3-8)' in a 7-segment 
+                                display format.
+        * "number9":            If called, it will display the number '9' in a 7-segment 
+                                display format.
+        * "displayNumber":      If called, it will display the number from 0-9 in a 7-segment 
+                                display format. It will call the previous 'number' functions 
+                                in order to do this. The number display will be based off 
+                                the score of the player.
+        * "displayAandM"        Display "A" (for Aditya) in morse code, symbolic "and", 
+                                and "M" (for Micheal) in morse code!
+                                Easter Egg to be found by user! Refers back to the first
+                                Easter Egg ever by Warren Robinnett in Adventure. 
+        * "start":              This function will be called in main. Once both buttons are 
+                                pushed down for 3 seconds, the game will start.
+        * "main":               This is the first function which will be called. It will 
+                                start and end the game.
+    * "README"
+    * "asteroidsWiring1.jpg": Photos included to assist in understanding the wiring.
+    * "asteroidsWiring2.jpg"
+    * "asteroidsWiring3.jpg"
+    * "Makefile"
+----------------------------------------------------------------------------------
+Materials:
+* 1 Arduino
+* 36 Jumper Wires to Connect the Arduino to buttons, LEDs, and the speaker
+* 5 Jumper Wires to Connect breadboard grounds together 
+* 2 Buttons
+* 1 Speaker
+* 20 Red LEDs
+* 7 Green LEDs
+* 30 Resistors
+* 3 Breadboards
+* 1 Connecting Wire for Power (Either connecting to computer or wall)
+* 1 Computer, or 1 Wall Socket
+----------------------------------------------------------------------------------
+Wiring Instructions:
+There are 27 LEDs in total, 7 of which are green and 20 of which are red. 
+There are four LEDs on each row of the breadboards, with a total of 6 rows
+spread over 3 breadboards. Four green LEDs should be placed in the row
+closest to the Arduino, wired(from left to right) using ports 2 through 5 
+as well as a resistor attached in series with each LED; the LED turned on 
+represents the position of the player's spacecraft. Two buttons should also 
+be placed on either side of the first row and wired using ports 8 and 9 
+as well as 2 resistors. In the next row, on the right hand side, place the
+three remaining green LEDs as close as possible to each other, wiring them 
+using 3 resistors and ports 11 to 13 from left to right. These represent the 
+player's lives; when all three are on, the player has three lives remaing, when 
+two are on, they have two lives, and so on. Then, directly above the leftmost 
+green LED, place 5 red LEDs, each in a different row of the three breadboards 
+(in a straight line). Wire each LED using a resistor, and then, from top to 
+bottom, wire the LEDs using ports 53-49. Do the same above the second green 
+LED, wiring the red LEDs from ports 48-44 (again from top to bottom). Do the 
+same thing once again for the third column of red LEDs, placing them directly 
+above the third green LED and wiring them using ports 43, 42, 41, 40 and A0 
+(from top to bottom). For the final column, place 5 more red LEDs and wire them 
+using ports A1 through A5. Then, connect the speaker to port 31 and ground it 
+using a resistor. Finally, connect all of the grounds together and connect the 
+breadboard ground to the ground on the arduino. 
+
+
+Wiring Diagram (the ports are listed in brackets):
+
+Breaboard 3:
+
+            Red(53)         Red(48)         Red(43)         Red(A1)
+
+
+            Red(52)         Red(47)         Red(42)         Red(A2)
+
+
+Breadboard 2:          
+
+            Red(51)         Red(46)         Red(41)         Red(A3)
+
+
+Speaker(31) Red(50)         Red(45)         Red(40)         Red(A4)
+
+
+Breadboard 1:
+
+            Red(49)         Red(44)         Red(A0)         Red(A5)     Green(11) Green(12) Green(13)
+
+Button(8)                                                               Button(9)
+            Green(2)        Green(3)        Green(4)        Green(5)
+
+
+For further instructions, please see the wiring photos included in the asteroids
+file, called asteroidsWiring1.jpg, asteroidsWiring2.jpg, and asteroidsWiring3.jpg.
+
+Also, we would be more than happy to bring in our currently wired arduino. If it
+would assist in any way in grading our project, please do not hesitate to reach 
+out to either of us asking for a demonstration of our wiring!
+----------------------------------------------------------------------------------
+Running Instructions:
+
+To run 'asteroids.cpp' with 1 Computer:
+1) After wiring your arduino as stated above and connecting it to your 
+computer, open terminal and navigate to the directory where "asteroids.cpp" 
+is located,making sure your Makefile is in the same directory.
+2) Enter "make", then "make upload" to upload the code to the Arduino.
+3) Once the code has been uploaded, press and hold both side buttons
+for three seconds until the game starts.
+4) Move left and right to avoid the asteroids, and enjoy playing
+"Arduino Asteroids"!
+----------------------------------------------------------------------------------
+Assumptions:
+
+For this assignment, it was assumed that the user can folllow instructions
+and use the terminal with basic proficiency (to navigate to the directory 
+where asteroids.cpp is located, as well as to use "make" and "make upload"
+without any difficulty). It is also assumed the user can wire the arduino 
+as specified above.
+----------------------------------------------------------------------------------
+References:
+
+Used this to learn how to make sounds on the arduino:
+https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/overview
+
+Went through this guide to understand concurrency and the millis() function:
+https://forum.arduino.cc/index.php?topic=503368.0
+----------------------------------------------------------------------------------
