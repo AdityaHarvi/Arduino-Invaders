@@ -165,14 +165,6 @@ for three seconds until the game starts.
 4) Move left and right to avoid the asteroids, and enjoy playing
 "Arduino Asteroids"!
 ----------------------------------------------------------------------------------
-Assumptions:
-
-For this assignment, it was assumed that the user can folllow instructions
-and use the terminal with basic proficiency (to navigate to the directory 
-where asteroids.cpp is located, as well as to use "make" and "make upload"
-without any difficulty). It is also assumed the user can wire the arduino 
-as specified above.
-----------------------------------------------------------------------------------
 References:
 
 Used this to learn how to make sounds on the arduino:
