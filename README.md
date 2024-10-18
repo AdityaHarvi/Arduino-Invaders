@@ -1,23 +1,19 @@
-Name: Aditya Harvi
-Name: Micheal Antifaoff
-CMPUT 274, Fall 2018
+# Arduino Invaders
 
-Final Project: Arduino Invaders
-----------------------------------------------------------------------------------
-Materials:
-* 1 Arduino
-* 36 Jumper Wires to Connect the Arduino to buttons, LEDs, and the speaker
-* 5 Jumper Wires to Connect breadboard grounds together 
-* 2 Buttons
-* 1 Speaker
-* 20 Red LEDs
-* 7 Green LEDs
-* 30 Resistors
-* 3 Breadboards
-* 1 Connecting Wire for Power (Either connecting to computer or wall)
-* 1 Computer, or 1 Wall Socket
-----------------------------------------------------------------------------------
-Wiring Instructions:
+## Materials
+- 1 Arduino
+- 36 Jumper Wires to Connect the Arduino to buttons, LEDs, and the speaker
+- 5 Jumper Wires to Connect breadboard grounds together 
+- 2 Buttons
+- 1 Speaker
+- 20 Red LEDs
+- 7 Green LEDs
+- 30 Resistors
+- 3 Breadboards
+- 1 Connecting Wire for Power (Either connecting to computer or wall)
+- 1 Computer, or 1 Wall Socket
+
+## Wiring Instructions
 There are 27 LEDs in total, 7 of which are green and 20 of which are red. 
 There are four LEDs on each row of the breadboards, with a total of 6 rows
 spread over 3 breadboards. Four green LEDs should be placed in the row
@@ -39,12 +35,10 @@ above the third green LED and wiring them using ports 43, 42, 41, 40 and A0
 (from top to bottom). For the final column, place 5 more red LEDs and wire them 
 using ports A1 through A5. Then, connect the speaker to port 31 and ground it 
 using a resistor. Finally, connect all of the grounds together and connect the 
-breadboard ground to the ground on the arduino. 
+breadboard ground to the ground on the arduino.
 
-
-Wiring Diagram (the ports are listed in brackets):
-
-Breaboard 3:
+## Wiring Diagram (the ports are listed in brackets)
+Breadboard 3:
 
             Red(53)         Red(48)         Red(43)         Red(A1)
 
@@ -67,16 +61,7 @@ Breadboard 1:
 Button(8)                                                               Button(9)
             Green(2)        Green(3)        Green(4)        Green(5)
 
-
-For further instructions, please see the wiring photos included in the asteroids
-file, called asteroidsWiring1.jpg, asteroidsWiring2.jpg, and asteroidsWiring3.jpg.
-
-Also, we would be more than happy to bring in our currently wired arduino. If it
-would assist in any way in grading our project, please do not hesitate to reach 
-out to either of us asking for a demonstration of our wiring!
-----------------------------------------------------------------------------------
-Running Instructions:
-
+## Running Instructions
 To run 'asteroids.cpp' with 1 Computer:
 1) After wiring your arduino as stated above and connecting it to your 
 computer, open terminal and navigate to the directory where "asteroids.cpp" 
@@ -86,12 +71,17 @@ is located,making sure your Makefile is in the same directory.
 for three seconds until the game starts.
 4) Move left and right to avoid the asteroids, and enjoy playing
 "Arduino Asteroids"!
-----------------------------------------------------------------------------------
-References:
 
+## Team
+- Aditya Harvi
+- Micheal Antifaoff
+
+## Referemces
 Used this to learn how to make sounds on the arduino:
 https://learn.adafruit.com/adafruit-arduino-lesson-10-making-sounds/overview
 
 Went through this guide to understand concurrency and the millis() function:
 https://forum.arduino.cc/index.php?topic=503368.0
-----------------------------------------------------------------------------------
+
+For further instructions, please see the wiring photos included in the asteroids
+file, called asteroidsWiring1.jpg, asteroidsWiring2.jpg, and asteroidsWiring3.jpg.
