@@ -40,26 +40,28 @@ breadboard ground to the ground on the arduino.
 ## Wiring Diagram (the ports are listed in brackets)
 Breadboard 3:
 
-            Red(53)         Red(48)         Red(43)         Red(A1)
+                        Red(53)         Red(48)         Red(43)         Red(A1)
 
 
-            Red(52)         Red(47)         Red(42)         Red(A2)
+                        Red(52)         Red(47)         Red(42)         Red(A2)
 
 
 Breadboard 2:          
 
-            Red(51)         Red(46)         Red(41)         Red(A3)
+                        Red(51)         Red(46)         Red(41)         Red(A3)
 
 
-Speaker(31) Red(50)         Red(45)         Red(40)         Red(A4)
+            Speaker(31)
+
+                        Red(50)         Red(45)         Red(40)         Red(A4)
 
 
 Breadboard 1:
 
-            Red(49)         Red(44)         Red(A0)         Red(A5)     Green(11) Green(12) Green(13)
+                        Red(49)         Red(44)         Red(A0)         Red(A5)     Green(11) Green(12) Green(13)
 
-Button(8)                                                               Button(9)
-            Green(2)        Green(3)        Green(4)        Green(5)
+            Button(8)                                                               Button(9)
+                        Green(2)        Green(3)        Green(4)        Green(5)
 
 ## Running Instructions
 To run 'asteroids.cpp' with 1 Computer:
