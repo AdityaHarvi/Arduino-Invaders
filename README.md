@@ -1,6 +1,11 @@
 ![asteroidsWiring](https://github.com/user-attachments/assets/c7d90a67-cd52-4f87-8dc1-4e033fa84479)
 
 # Arduino Invaders
+It's the classic Space Invaders game but on an Arduino and a set of breadboards!
+
+Designed as a handheld device, this setup allows the player to move left or right along the bottom row of green LEDs via two buttons positioned on either side.
+Dodge incoming enemies (indicated by the red LEDs) to maximize your score, but be careful, the longer you last, the faster they come for you!
+There is also an easter egg hidden away in this game, see if you can find it!
 
 ## Gameplay Video
 [![Arduin-Invaders Gamepaly Video](https://img.youtube.com/vi/-c4B70-OOQQ/0.jpg)](https://youtu.be/-c4B70-OOQQ)
