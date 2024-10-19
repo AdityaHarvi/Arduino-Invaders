@@ -1,6 +1,10 @@
 ![asteroidsWiring](https://github.com/user-attachments/assets/c7d90a67-cd52-4f87-8dc1-4e033fa84479)
 
 # Arduino Invaders
+
+## Gameplay Video
+[![Arduin-Invaders Gamepaly Video](https://img.youtube.com/vi/-c4B70-OOQQ/0.jpg)](https://youtu.be/-c4B70-OOQQ)
+
 ## Materials
 - 1 Arduino
 - 36 Jumper Wires to Connect the Arduino to buttons, LEDs, and the speaker
